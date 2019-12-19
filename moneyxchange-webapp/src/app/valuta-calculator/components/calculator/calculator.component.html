@@ -1,0 +1,31 @@
+<section class="calculator">
+  <form [formGroup]="form" class="form form--calculator" autocomplete="off" (ngSubmit)="updateTargetValue()" mxcAvoidSubmitOnEnter>
+
+    <div class="form__field">
+      <label class="form__label" for="source">Source</label>
+      <input
+        class="form__input form__input--monospaced"
+        type="text"
+        formControlName="source"
+        id="source"
+        [placeholder]="source.name"
+        [textMask]="{ mask: sourceMask }">
+    </div>
+  
+    <div class="form__field">
+      <label class="form__label" for="target">Target</label>
+      <input
+        class="form__input form__input--monospaced"
+        type="text"
+        formControlName="target"
+        id="target"
+        [placeholder]="target.name"
+        [textMask]="{ mask: targetMask }">
+    </div>
+
+    <div class="form__buttons">
+      <button type="submit" class="form__button form__button--main">Calculate</button>
+    </div>
+  
+  </form>
+</section>

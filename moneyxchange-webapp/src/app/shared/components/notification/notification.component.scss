@@ -1,0 +1,59 @@
+@import './src/styles/vars';
+@import './src/styles/mixins';
+
+$notification-width-large-screens: 40rem;
+$notification-width: 20rem;
+$right-position: 1rem;
+
+.notification {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 100;
+  width: $notification-width-large-screens;
+  padding: 2rem 3rem 2rem 2rem;
+  border-radius: 3px;
+  background-color: $color-7;
+  color: $color-white;
+  font-size: 1.4rem;
+  user-select: none;
+  transform: translateX($notification-width-large-screens + $right-position);
+  transition: transform $transition-time-medium cubic-bezier(.38,-1.17,.44,1.92);
+
+  @include media-query-for(tablet) {
+    width: $notification-width;
+    transform: translateX($notification-width + $right-position);
+  }
+
+  @include media-query-for(small-phone) {
+    border-radius: 0;
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    width: 100%;
+    left: 0;
+    top: 0;
+    transform: translateY(-100%);
+    transition: transform $transition-time-medium ease-out;
+  }
+
+  &--visible {
+    transform: translateX(0);
+
+    @include media-query-for(small-phone) {
+      transform: translateY(0);
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    
+    @include media-query-for(small-phone) {
+      font-weight: 700;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__message {
+    margin-top: 1rem;
+    color: rgba($color-white, 0.9);
+  }
+}

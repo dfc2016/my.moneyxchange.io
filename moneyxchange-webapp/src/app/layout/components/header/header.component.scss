@@ -1,0 +1,27 @@
+@import './src/styles/vars';
+@import './src/styles/mixins';
+
+.header {
+  padding: 2rem 0 6rem;
+  background-color: $color-white;
+
+  @include media-query-for(phone) {
+    padding: 2rem 0 2rem;
+  }
+}
+
+.logo {
+  width: 15rem;
+  height: 15rem;
+  margin: 0 auto;
+
+  @include media-query-for(small-phone) {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 100%;
+  }
+}

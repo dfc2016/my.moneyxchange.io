@@ -1,0 +1,21 @@
+@import './src/styles/mixins';
+
+.social {
+  display: flex;
+
+  @include media-query-for(small-phone) {
+    justify-content: center;
+  }
+  
+  &__link {
+    text-decoration: none;
+    
+    &:not(:last-of-type) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__icon {
+    max-width: 32px;
+  }
+}

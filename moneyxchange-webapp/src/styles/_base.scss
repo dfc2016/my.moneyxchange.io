@@ -1,0 +1,30 @@
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // 10px
+
+  @include media-query-for(small-phone) {
+    font-size: 56.25%; // 9px
+  }
+}
+
+body {
+  font-family: 'Raleway', 'Segoe UI', 'Geneva', sans-serif;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+.container {
+  min-width: 30rem;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-columns: 1fr;
+}

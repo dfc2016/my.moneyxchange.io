@@ -1,0 +1,26 @@
+
+/* colors */
+
+$color-primary: #444444;
+$color-white: #fafafa;
+$color-grey-dark: #7d7c7d;
+$color-grey-light: #888888;
+$color-yellow: #f7f0e0;
+
+$color-1: #367261;
+$color-2: #163e45;
+$color-3: #5f8f8c;
+$color-4: #ff7d58;
+$color-5: #c54747;
+$color-6: #91352a;
+$color-7: #ff4c4c;
+
+/* transitions */
+
+$transition-time-short: 0.2s;
+$transition-time-medium: 0.6s;
+$transition-time-long: 1s;
+
+$transition-short: all $transition-time-short ease;
+$transition-medium: all $transition-time-medium ease;
+$transition-long: all $transition-time-long ease;

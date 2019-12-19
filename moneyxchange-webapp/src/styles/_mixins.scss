@@ -1,0 +1,17 @@
+@mixin end-text-with-ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin media-query-for($device) {
+  @if $device == small-phone {
+    @media only screen and (max-width: 340px) { @content; }
+  }
+  @if $device == phone {
+    @media only screen and (max-width: 650px) { @content; }
+  }
+  @if $device == tablet {
+    @media only screen and (max-width: 800px) { @content; }
+  }
+}
